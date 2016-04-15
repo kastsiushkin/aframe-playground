@@ -35,7 +35,7 @@ class BoilerplateScene extends React.Component {
         </a-assets>
 
         {/*<Sky/>*/}
-        <a-sky src={this.state.sky}></a-sky>
+        <a-sky src={this.state.sky} rotation="0 12 0"></a-sky>
         <Camera><Cursor maxDistance={31} fuse={true} /></Camera>
 
         {/*<Entity light={{type: 'hemisphere', color: '#000',groundColor:'#fff', intensity: 1}}/>*/}
@@ -45,12 +45,12 @@ class BoilerplateScene extends React.Component {
                        radius="50"
                        theta-length="360"  />*/}
         <a-image  src="#lake"
-                  position="0 0 -5"
+                  position="5 0 -20"
                   look-at="[camera]"
                   onClick={this.changeSky.bind(this, '#lake')}  />
 
         <a-image  src="#puydesancy"
-                  position="-2 0 -5"
+                  position="-5 0 -20"
                   look-at="[camera]"
                   onClick={this.changeSky.bind(this, '#puydesancy')}  />
 

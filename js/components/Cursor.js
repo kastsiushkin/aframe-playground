@@ -4,21 +4,23 @@ import React from 'react';
 export default props => {
   const geometry = {
     primitive: 'ring',
-    radiusInner: 0.001,
-    radiusOuter: 0.01
+    radiusInner: 0.004,
+    radiusOuter: 0.009
   };
   const material = {
-    color: props.color,
+    color: props.color || "red",
     shader: 'flat',
     opacity: props.opacity || 0.9,
     transparent: true
   };
   return (
     <Entity cursor={props} geometry={geometry} material={material} position="0 0 -1">
+      <Animation begin="1000" easing="ease-in" attribute="scale"
+               fill="both" from="0 0 0" to="1 1 1"></Animation>
       <Animation begin="click" easing="ease-in" attribute="scale"
                fill="backwards" from="0.1 0.1 0.1" to="1 1 1"></Animation>
       <Animation begin="fusing" easing="ease-in" attribute="scale"
-               fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></Animation>
+               fill="backwards" from="1 1 1" to="0.1 0.1 0.1"></Animation>
     </Entity>
   );
 }

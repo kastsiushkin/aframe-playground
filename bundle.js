@@ -125,18 +125,18 @@
 	          _react2.default.createElement('img', { id: 'lake', src: 'lake.jpg' }),
 	          _react2.default.createElement('img', { id: 'puydesancy', src: 'puydesancy.jpg' })
 	        ),
-	        _react2.default.createElement('a-sky', { src: this.state.sky }),
+	        _react2.default.createElement('a-sky', { src: this.state.sky, rotation: '0 12 0' }),
 	        _react2.default.createElement(
 	          _Camera2.default,
 	          null,
 	          _react2.default.createElement(_Cursor2.default, { maxDistance: 31, fuse: true })
 	        ),
 	        _react2.default.createElement('a-image', { src: '#lake',
-	          position: '0 0 -5',
+	          position: '5 0 -20',
 	          'look-at': '[camera]',
 	          onClick: this.changeSky.bind(this, '#lake') }),
 	        _react2.default.createElement('a-image', { src: '#puydesancy',
-	          position: '-2 0 -5',
+	          position: '-5 0 -20',
 	          'look-at': '[camera]',
 	          onClick: this.changeSky.bind(this, '#puydesancy') })
 	      );
@@ -88806,11 +88806,11 @@
 	exports.default = function (props) {
 	  var geometry = {
 	    primitive: 'ring',
-	    radiusInner: 0.001,
-	    radiusOuter: 0.01
+	    radiusInner: 0.004,
+	    radiusOuter: 0.009
 	  };
 	  var material = {
-	    color: props.color,
+	    color: props.color || "red",
 	    shader: 'flat',
 	    opacity: props.opacity || 0.9,
 	    transparent: true
@@ -88818,10 +88818,12 @@
 	  return _react2.default.createElement(
 	    _aframeReact.Entity,
 	    { cursor: props, geometry: geometry, material: material, position: '0 0 -1' },
+	    _react2.default.createElement(_aframeReact.Animation, { begin: '1000', easing: 'ease-in', attribute: 'scale',
+	      fill: 'both', from: '0 0 0', to: '1 1 1' }),
 	    _react2.default.createElement(_aframeReact.Animation, { begin: 'click', easing: 'ease-in', attribute: 'scale',
 	      fill: 'backwards', from: '0.1 0.1 0.1', to: '1 1 1' }),
 	    _react2.default.createElement(_aframeReact.Animation, { begin: 'fusing', easing: 'ease-in', attribute: 'scale',
-	      fill: 'forwards', from: '1 1 1', to: '0.1 0.1 0.1' })
+	      fill: 'backwards', from: '1 1 1', to: '0.1 0.1 0.1' })
 	  );
 	};
 
