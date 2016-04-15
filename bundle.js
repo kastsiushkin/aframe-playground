@@ -138,15 +138,7 @@
 	        _react2.default.createElement('a-image', { src: '#puydesancy',
 	          position: '-2 0 -5',
 	          'look-at': '[camera]',
-	          onClick: this.changeSky.bind(this, '#puydesancy') }),
-	        _react2.default.createElement(_aframeReact.Entity, { mixin: 'cube',
-	          material: 'src: #lake; shader: flat',
-	          position: '-5 0 -20',
-	          onClick: this.changeSky.bind(this, '#lake') }),
-	        _react2.default.createElement(_aframeReact.Entity, { mixin: 'cube',
-	          material: 'src: #puydesancy; shader: flat',
-	          position: '5 0 -20',
-	          onClick: this.changeSky.bind(this, "#puydesancy") })
+	          onClick: this.changeSky.bind(this, '#puydesancy') })
 	      );
 	    }
 	  }]);

@@ -54,7 +54,7 @@ class BoilerplateScene extends React.Component {
                   look-at="[camera]"
                   onClick={this.changeSky.bind(this, '#puydesancy')}  />
 
-        <Entity mixin="cube"
+        {/*<Entity mixin="cube"
           material="src: #lake; shader: flat"
           position="-5 0 -20"
           onClick={this.changeSky.bind(this, '#lake')}>
@@ -64,7 +64,7 @@ class BoilerplateScene extends React.Component {
           material="src: #puydesancy; shader: flat"
           position="5 0 -20"
           onClick={this.changeSky.bind(this, "#puydesancy")}>
-        </Entity>
+        </Entity>*/}
       </Scene>
     );
   }
