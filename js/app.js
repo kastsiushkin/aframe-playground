@@ -12,7 +12,7 @@ class BoilerplateScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sky: '#lake'
+      sky: '#puydesancy'
     }
   }
 
@@ -20,7 +20,6 @@ class BoilerplateScene extends React.Component {
     this.setState({
       sky: sky,
     });
-    console.log(this.state);
   };
 
   render () {
@@ -37,7 +36,7 @@ class BoilerplateScene extends React.Component {
 
         {/*<Sky/>*/}
         <a-sky src={this.state.sky}></a-sky>
-        <Camera><Cursor maxDistance={31} /></Camera>
+        <Camera><Cursor maxDistance={31} fuse={true} /></Camera>
 
         {/*<Entity light={{type: 'hemisphere', color: '#000',groundColor:'#fff', intensity: 1}}/>*/}
         {/*<a-curvedimage src="#lake"

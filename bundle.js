@@ -101,11 +101,10 @@
 	      _this.setState({
 	        sky: sky
 	      });
-	      console.log(_this.state);
 	    };
 
 	    _this.state = {
-	      sky: '#lake'
+	      sky: '#puydesancy'
 	    };
 	    return _this;
 	  }
@@ -130,7 +129,7 @@
 	        _react2.default.createElement(
 	          _Camera2.default,
 	          null,
-	          _react2.default.createElement(_Cursor2.default, { maxDistance: 31 })
+	          _react2.default.createElement(_Cursor2.default, { maxDistance: 31, fuse: true })
 	        ),
 	        _react2.default.createElement('a-image', { src: '#lake',
 	          position: '0 0 -5',
@@ -88827,7 +88826,10 @@
 	  return _react2.default.createElement(
 	    _aframeReact.Entity,
 	    { cursor: props, geometry: geometry, material: material, position: '0 0 -1' },
-	    _react2.default.createElement(_aframeReact.Animation, { attribute: 'scale', begin: 'click', dur: '600', fill: 'backwards', to: '0 0 0' })
+	    _react2.default.createElement(_aframeReact.Animation, { begin: 'click', easing: 'ease-in', attribute: 'scale',
+	      fill: 'backwards', from: '0.1 0.1 0.1', to: '1 1 1' }),
+	    _react2.default.createElement(_aframeReact.Animation, { begin: 'fusing', easing: 'ease-in', attribute: 'scale',
+	      fill: 'forwards', from: '1 1 1', to: '0.1 0.1 0.1' })
 	  );
 	};
 

@@ -15,7 +15,10 @@ export default props => {
   };
   return (
     <Entity cursor={props} geometry={geometry} material={material} position="0 0 -1">
-      <Animation attribute="scale" begin="click" dur="600" fill="backwards" to="0 0 0"/>
+      <Animation begin="click" easing="ease-in" attribute="scale"
+               fill="backwards" from="0.1 0.1 0.1" to="1 1 1"></Animation>
+      <Animation begin="fusing" easing="ease-in" attribute="scale"
+               fill="forwards" from="1 1 1" to="0.1 0.1 0.1"></Animation>
     </Entity>
   );
 }
