@@ -36,9 +36,7 @@ class BoilerplateScene extends React.Component {
         </a-assets>
 
         {/*<Sky/>*/}
-        <a-sky src={this.state.sky}>
-          <Animation attribute="rotation" dur="20000" fill="both" from="0 0 0" to="0 360 0" easing="linear" repeat="indefinite"/>
-        </a-sky>
+        <a-sky src={this.state.sky}></a-sky>
         <Camera><Cursor maxDistance={31} /></Camera>
 
         {/*<Entity light={{type: 'hemisphere', color: '#000',groundColor:'#fff', intensity: 1}}/>*/}

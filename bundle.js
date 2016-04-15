@@ -126,11 +126,7 @@
 	          _react2.default.createElement('img', { id: 'lake', src: 'lake.jpg' }),
 	          _react2.default.createElement('img', { id: 'puydesancy', src: 'puydesancy.jpg' })
 	        ),
-	        _react2.default.createElement(
-	          'a-sky',
-	          { src: this.state.sky },
-	          _react2.default.createElement(_aframeReact.Animation, { attribute: 'rotation', dur: '20000', fill: 'both', from: '0 0 0', to: '0 360 0', easing: 'linear', repeat: 'indefinite' })
-	        ),
+	        _react2.default.createElement('a-sky', { src: this.state.sky }),
 	        _react2.default.createElement(
 	          _Camera2.default,
 	          null,
