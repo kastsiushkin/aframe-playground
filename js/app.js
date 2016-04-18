@@ -24,6 +24,8 @@ class BoilerplateScene extends React.Component {
 
   render () {
     return (
+      <div>
+        <div>asdljfalskjdf</div>
       <Scene>
         <a-assets>
           <a-mixin id="red" material="color: red"></a-mixin>
@@ -35,15 +37,15 @@ class BoilerplateScene extends React.Component {
         </a-assets>
 
         {/*<Sky/>*/}
-        {/*<a-sky src={this.state.sky} rotation="0 12 0"></a-sky>*/}
+        <a-sky src={this.state.sky} rotation="0 0 0"></a-sky>
         <Camera><Cursor maxDistance={31} fuse={true} /></Camera>
 
         {/*<Entity light={{type: 'hemisphere', color: '#000',groundColor:'#fff', intensity: 1}}/>*/}
-        <a-curvedimage src="#puydesancy"
+        {/*<a-curvedimage src="#puydesancy"
                        position="0 0 0"
                        height="120"
                        radius="50"
-                       theta-length="360"  />
+                       theta-length="360"  />*/}
         <a-image  src="#lake"
                   position="5 0 -20"
                   look-at="[camera]"
@@ -54,7 +56,7 @@ class BoilerplateScene extends React.Component {
                   look-at="[camera]"
                   onClick={this.changeSky.bind(this, '#puydesancy')}  />
 
-        {/*<Entity mixin="cube"
+        <Entity mixin="cube"
           material="src: #lake; shader: flat"
           position="-5 0 -20"
           onClick={this.changeSky.bind(this, '#lake')}>
@@ -64,8 +66,9 @@ class BoilerplateScene extends React.Component {
           material="src: #puydesancy; shader: flat"
           position="5 0 -20"
           onClick={this.changeSky.bind(this, "#puydesancy")}>
-        </Entity>*/}
+        </Entity>
       </Scene>
+      </div>
     );
   }
 }

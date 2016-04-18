@@ -113,36 +113,49 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        _aframeReact.Scene,
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'a-assets',
+	          'div',
 	          null,
-	          _react2.default.createElement('a-mixin', { id: 'red', material: 'color: red' }),
-	          _react2.default.createElement('a-mixin', { id: 'blue', material: 'color: blue' }),
-	          _react2.default.createElement('a-mixin', { id: 'cube', geometry: 'primitive: box' }),
-	          _react2.default.createElement('img', { id: 'man', src: 'man.jpg' }),
-	          _react2.default.createElement('img', { id: 'lake', src: 'lake.jpg' }),
-	          _react2.default.createElement('img', { id: 'puydesancy', src: 'puydesancy.jpg' })
+	          'asdljfalskjdf'
 	        ),
 	        _react2.default.createElement(
-	          _Camera2.default,
+	          _aframeReact.Scene,
 	          null,
-	          _react2.default.createElement(_Cursor2.default, { maxDistance: 31, fuse: true })
-	        ),
-	        _react2.default.createElement('a-curvedimage', { src: '#puydesancy',
-	          position: '0 0 0',
-	          height: '120',
-	          radius: '50',
-	          'theta-length': '360' }),
-	        _react2.default.createElement('a-image', { src: '#lake',
-	          position: '5 0 -20',
-	          'look-at': '[camera]',
-	          onClick: this.changeSky.bind(this, '#lake') }),
-	        _react2.default.createElement('a-image', { src: '#puydesancy',
-	          position: '-5 0 -20',
-	          'look-at': '[camera]',
-	          onClick: this.changeSky.bind(this, '#puydesancy') })
+	          _react2.default.createElement(
+	            'a-assets',
+	            null,
+	            _react2.default.createElement('a-mixin', { id: 'red', material: 'color: red' }),
+	            _react2.default.createElement('a-mixin', { id: 'blue', material: 'color: blue' }),
+	            _react2.default.createElement('a-mixin', { id: 'cube', geometry: 'primitive: box' }),
+	            _react2.default.createElement('img', { id: 'man', src: 'man.jpg' }),
+	            _react2.default.createElement('img', { id: 'lake', src: 'lake.jpg' }),
+	            _react2.default.createElement('img', { id: 'puydesancy', src: 'puydesancy.jpg' })
+	          ),
+	          _react2.default.createElement('a-sky', { src: this.state.sky, rotation: '0 0 0' }),
+	          _react2.default.createElement(
+	            _Camera2.default,
+	            null,
+	            _react2.default.createElement(_Cursor2.default, { maxDistance: 31, fuse: true })
+	          ),
+	          _react2.default.createElement('a-image', { src: '#lake',
+	            position: '5 0 -20',
+	            'look-at': '[camera]',
+	            onClick: this.changeSky.bind(this, '#lake') }),
+	          _react2.default.createElement('a-image', { src: '#puydesancy',
+	            position: '-5 0 -20',
+	            'look-at': '[camera]',
+	            onClick: this.changeSky.bind(this, '#puydesancy') }),
+	          _react2.default.createElement(_aframeReact.Entity, { mixin: 'cube',
+	            material: 'src: #lake; shader: flat',
+	            position: '-5 0 -20',
+	            onClick: this.changeSky.bind(this, '#lake') }),
+	          _react2.default.createElement(_aframeReact.Entity, { mixin: 'cube',
+	            material: 'src: #puydesancy; shader: flat',
+	            position: '5 0 -20',
+	            onClick: this.changeSky.bind(this, "#puydesancy") })
+	        )
 	      );
 	    }
 	  }]);
@@ -88811,7 +88824,7 @@
 	  var geometry = {
 	    primitive: 'ring',
 	    radiusInner: 0.004,
-	    radiusOuter: 0.015
+	    radiusOuter: 0.215
 	  };
 	  var material = {
 	    color: props.color || "red",
